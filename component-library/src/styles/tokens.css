@@ -1,0 +1,158 @@
+/* ============ "Blank" design system — design tokens ============ */
+:root,
+[data-theme="light"]{
+  /* ─── Backgrounds ─── */
+  --bg-primary:#ffffff;
+  --bg-secondary:#eaedf0;
+  --bg-secondary-subtle:#f6f8fa;
+  --bg-active:#eaedf0;
+  --bg-hover:#eaedf0;
+  --bg-disabled-subtle:#f6f8fa;
+  --bg-brand-solid:#008ee5;
+  --bg-brand-solid-hover:#0077c0;
+  --bg-brand-primary:#f0f7fd;
+  --bg-brand-secondary:#d6ebfa;
+  --bg-success-primary:#eff8ec;
+  --bg-success-solid:#208d53;
+  --bg-error-primary:#ffebe9;
+  --bg-warning-primary:#fff8f0;
+  --bg-purple-primary:#eee0f0;
+  --bg-surface-default:#ffffff;
+  --bg-input-normal:#ffffff;
+  --bg-overlay:rgba(255,255,255,0);
+
+  /* ─── Text ─── */
+  --text-primary:#24292f;
+  --text-base-primary:#14151a;
+  --text-secondary:#4f5861;
+  --text-tertiary:#656d76;
+  --text-quaternary:#7d8590;
+  --text-quinary:#a2a9b1;
+  --text-disabled:#a2a9b1;
+  --text-placeholder:#7d8590;
+  --text-brand:#008ee5;
+  --text-success:#208d53;
+  --text-error:#b11d27;
+  --text-warning:#c86a04;
+  --text-purple:#4a0d8a;
+  --text-on-brand:#ffffff;
+
+  /* ─── Borders ─── */
+  --border-primary:#c1c7cd;
+  --border-secondary:#d8dee4;
+  --border-surface:#ffffff;
+  --border-brand:#85c2f0;
+  --border-action-normal:#dee0e3;
+  --border-disabled:#d8dee4;
+
+  /* ─── Foreground / Icons ─── */
+  --fg-brand:#008ee5;
+  --fg-success:#208d53;
+  --fg-warning:#c86a04;
+  --fg-purple:#4a0d8a;
+  --fg-tertiary:#656d76;
+  --fg-quaternary:#7d8590;
+  --fg-quinary:#a2a9b1;
+  --fg-error:#b11d27;
+
+  /* ─── Legacy aliases (app-specific token names) ─── */
+  --bg-primary-hover:#eaedf0;
+  --bg-tertiary:#d8dee4;
+  --bg-canvas:#f6f8fa;
+  --brand-text:#008ee5;   --brand-bg:#f0f7fd;
+  --success-text:#208d53; --success-bg:#eff8ec;
+  --warning-text:#c86a04; --warning-bg:#fff8f0;
+  --error-text:#b11d27;   --error-bg:#ffebe9;
+  --purple-text:#4a0d8a;  --purple-bg:#eee0f0;
+
+  /* ─── Radii & shadows ─── */
+  --radius-xs:4px; --radius-sm:6px; --radius-md:8px; --radius-lg:10px; --radius-xl:12px; --radius-full:999px;
+  --shadow-xs:0px 1px 2px 0px rgba(16,24,40,.05);
+  --shadow-md:0px 4px 16px 0px rgba(16,24,40,.10);
+  --shadow-lg:0px 10px 16px -3px rgba(20,21,26,.08),0px 3px 6px -2px rgba(20,21,26,.05);
+  --shadow-modal:0px 12px 16px 0px rgba(16,24,40,.08),0px 4px 6px 0px rgba(16,24,40,.03);
+  --shadow-input:0px 1px 1px rgba(20,21,26,.05);
+
+  /* ─── Focus ring & scrim ─── */
+  --focus-ring:rgba(51,136,255,.32);
+  --bg-scrim:rgba(16,24,40,.45);
+}
+
+[data-theme="dark"]{
+  /* Dark values read from Figma node 6820-75408 (real designer tokens).
+     Unexposed tokens are derived from light-mode equalities and marked (derived). */
+  /* ─── Backgrounds ─── */
+  --bg-primary:#000000;
+  --bg-secondary:#24292f;
+  --bg-secondary-subtle:#0d1117;      /* derived */
+  --bg-active:#24292f;                /* = bg-secondary (light equality) */
+  --bg-hover:#24292f;                 /* = bg-secondary (light equality) */
+  --bg-disabled-subtle:#0d1117;       /* derived */
+  --bg-brand-solid:#008ee5;
+  --bg-brand-solid-hover:#33a3ea;
+  --bg-brand-primary:#001e2b;
+  --bg-brand-secondary:#001e2b;
+  --bg-success-primary:#0f2e1e;
+  --bg-success-solid:#165033;
+  --bg-error-primary:#2a1014;         /* derived */
+  --bg-warning-primary:#2a1c08;       /* derived */
+  --bg-purple-primary:#1a0840;
+  --bg-surface-default:#000000;
+  --bg-input-normal:#24292f;
+  --bg-overlay:rgba(0,0,0,0);
+
+  /* ─── Text ─── */
+  --text-primary:#f6f8fa;
+  --text-base-primary:#ffffff;        /* derived */
+  --text-secondary:#c1c7cd;
+  --text-tertiary:#a2a9b1;            /* = fg-tertiary(600) */
+  --text-quaternary:#a2a9b1;
+  --text-quinary:#7d8590;             /* = fg-quinary(400) */
+  --text-disabled:#7d8590;            /* derived */
+  --text-placeholder:#7d8590;         /* derived */
+  --text-brand:#008ee5;
+  --text-success:#8bd18b;
+  --text-error:#f85149;               /* derived */
+  --text-warning:#d29922;             /* derived */
+  --text-purple:#b689d6;
+  --text-on-brand:#ffffff;
+
+  /* ─── Borders ─── */
+  --border-primary:#545d68;           /* derived */
+  --border-secondary:#3b434b;
+  --border-surface:#000000;
+  --border-brand:#008ee5;             /* = fg-brand (derived) */
+  --border-action-normal:#3b434b;     /* derived */
+  --border-disabled:#3b434b;          /* = border-secondary (light equality) */
+
+  /* ─── Foreground / Icons ─── */
+  --fg-brand:#008ee5;
+  --fg-success:#8bd18b;               /* = text-success (derived) */
+  --fg-warning:#d29922;               /* derived */
+  --fg-purple:#b689d6;                /* = text-purple (derived) */
+  --fg-tertiary:#a2a9b1;
+  --fg-quaternary:#7d8590;            /* derived */
+  --fg-quinary:#7d8590;
+  --fg-error:#f85149;                 /* derived */
+
+  /* ─── Legacy aliases ─── */
+  --bg-primary-hover:#24292f;
+  --bg-tertiary:#3b434b;              /* = border-secondary (light equality) */
+  --bg-canvas:#000000;
+  --brand-text:#008ee5;   --brand-bg:#001e2b;
+  --success-text:#8bd18b; --success-bg:#0f2e1e;
+  --warning-text:#d29922; --warning-bg:#2a1c08;
+  --error-text:#f85149;   --error-bg:#2a1014;
+  --purple-text:#b689d6;  --purple-bg:#1a0840;
+
+  /* ─── Shadows ─── */
+  --shadow-xs:0px 1px 2px 0px rgba(1,4,9,.5);
+  --shadow-md:0px 4px 16px 0px rgba(1,4,9,.6);
+  --shadow-lg:0px 10px 16px -3px rgba(0,0,0,.5),0px 3px 6px -2px rgba(0,0,0,.4);
+  --shadow-modal:0px 12px 16px 0px rgba(0,0,0,.5),0px 4px 6px 0px rgba(0,0,0,.4);
+  --shadow-input:0px 1px 1px rgba(0,0,0,.4);
+
+  /* ─── Focus ring & scrim ─── */
+  --focus-ring:rgba(88,166,255,.4);
+  --bg-scrim:rgba(0,0,0,.6);
+}
